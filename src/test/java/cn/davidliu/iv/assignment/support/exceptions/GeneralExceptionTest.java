@@ -1,7 +1,5 @@
 package cn.davidliu.iv.assignment.support.exceptions;
 
-import cn.davidliu.iv.assignment.support.exceptions.LogConstructException;
-import cn.davidliu.iv.assignment.support.exceptions.LogInitializedException;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
