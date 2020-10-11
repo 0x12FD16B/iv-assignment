@@ -1,5 +1,7 @@
 package cn.davidliu.iv.assignment.support.exceptions;
 
+import cn.davidliu.iv.assignment.support.exceptions.LogConstructException;
+import cn.davidliu.iv.assignment.support.exceptions.LogInitializedException;
 import org.junit.Test;
 
 import java.lang.reflect.InvocationTargetException;
@@ -11,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  *
  * @author David Liu
  */
-public class GeneralExceptionTests {
+public class GeneralExceptionTest {
     private static final String EXPECTED_MESSAGE = "Test Message";
     private static final Exception EXPECTED_CAUSE = new Exception("Nested Exception");
 
