@@ -15,4 +15,8 @@ public class LogConstructException extends RuntimeException {
     public LogConstructException(String message, Throwable cause) {
         super(message, cause);
     }
+
+    public LogConstructException(Throwable cause) {
+        super(cause);
+    }
 }

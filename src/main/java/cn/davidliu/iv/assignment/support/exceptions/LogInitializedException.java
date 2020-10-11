@@ -15,4 +15,8 @@ public class LogInitializedException extends RuntimeException {
     public LogInitializedException(String message, Throwable cause) {
         super(message, cause);
     }
+
+    public LogInitializedException(Throwable cause) {
+        super(cause);
+    }
 }
