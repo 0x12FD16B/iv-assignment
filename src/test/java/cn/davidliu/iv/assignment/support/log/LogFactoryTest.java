@@ -14,6 +14,11 @@ public class LogFactoryTest {
         Assert.assertEquals(log.getClass().getName(), StdOutImpl.class.getName());
     }
 
+    @Test
+    public void testLogFactoryCouldConstruct() {
+        new LogFactory();
+    }
+
     private void logSomething(Log log) {
         log.debug("Debug message.");
         log.info("Info message");

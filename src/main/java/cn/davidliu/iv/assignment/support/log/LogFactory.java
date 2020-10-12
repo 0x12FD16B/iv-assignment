@@ -18,10 +18,6 @@ public final class LogFactory {
         tryImplementation(LogFactory::useStdOutLogging);
     }
 
-    private LogFactory() {
-        // 私有化构造函数, 不允许初始化
-    }
-
     public static Log getLog(Class<?> aClass) {
         return getLog(aClass.getName());
     }
