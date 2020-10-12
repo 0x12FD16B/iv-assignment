@@ -18,6 +18,9 @@ public class GeneralExceptionTest {
     @Test
     public void shouldInstantiateAndThrowAllCustomExceptions() throws Exception {
         Class<?>[] exceptionTypes = {
+                AssertFailureException.class,
+                ExpressionIllegalStateException.class,
+                IllegalParameterException.class,
                 LogConstructException.class,
                 LogInitializedException.class
         };
