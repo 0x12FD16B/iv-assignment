@@ -1,5 +1,7 @@
 package cn.davidliu.iv.assignment.struct.expression;
 
+import cn.davidliu.iv.assignment.struct.interfaces.IQueryPhraseValidation;
+import cn.davidliu.iv.assignment.support.util.AssertUtil;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class ExpressionNode {
+public class ExpressionNode implements IQueryPhraseValidation {
     /**
      * 表达式当前节点
      */
@@ -37,5 +39,14 @@ public class ExpressionNode {
 
     public ExpressionNode(Expression currentNode) {
         this.currentNode = currentNode;
+    }
+
+    @Override
+    public void validate() {
+        AssertUtil.assertNotNull(this.currentNode, "当前表达式节点不能为空");
+        if (hasNext) {
+            AssertUtil.assertNotNull(nextNode, "当 hasNext 为 true 时, 下一个节点不能为空");
+            AssertUtil.assertNotNull(logicOpType, "当下一节点不为空时, 表达式之间的逻辑连接符不能为空");
+        }
     }
 }
