@@ -38,9 +38,13 @@ public class ObjectFieldValueFilterOpExpressionTest {
     }
 
     @Test
-    public void testValidateObjectFieldOpTypeAssertError() {
-        ObjectFieldValueFilterOpExpression objectFieldValueFilterOpExpression = new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.EQ, "null");
-        objectFieldValueFilterOpExpression.validate();
+    public void generalValidateTest() {
+        new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.EQ, "null").validate();
+        new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.NE, "null").validate();
+        new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.LE, "null").validate();
+        new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.LT, "null").validate();
+        new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.GT, "null").validate();
+        new ObjectFieldValueFilterOpExpression("aaa", String.class, ObjectFieldValueFilterOpType.NOT_IN, Arrays.asList("aaa", "bbb")).validate();
     }
 
     @Test
