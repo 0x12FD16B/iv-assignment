@@ -36,6 +36,7 @@ public abstract class AbstractQuerySegmentHandlerInvokeTemplate implements Query
         segment.validate();
         ExpressionNode t = segment.segmentExpression();
         while (t != null && t.getCurrentNode() != null) {
+            t.validate();
             t.getCurrentNode().validate();
             t = t.getNextNode();
         }
