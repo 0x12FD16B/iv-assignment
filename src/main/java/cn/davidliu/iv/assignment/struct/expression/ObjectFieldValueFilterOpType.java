@@ -17,5 +17,13 @@ public enum ObjectFieldValueFilterOpType {
     // 值为空
     IS_NULL,
     // 值不为空
-    IS_NOT_NULL
+    IS_NOT_NULL,
+    // 大于等于
+    GE,
+    // 大于
+    GT,
+    // 小于等于
+    LE,
+    // 小于
+    LT;
 }

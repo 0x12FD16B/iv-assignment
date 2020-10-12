@@ -11,7 +11,7 @@ public class WhereHandlerTest {
     @Test
     public void acquireCurrentQuerySegment() {
         ExpressionNodeBuilder builder = new ExpressionNodeBuilder();
-        builder.firstExpression(new ObjectFieldValueFilterOpExpression());
+        builder.firstExpression(new ObjectFieldValueFilterOpExpression(null, null, null, null));
         Where where = new Where(builder.buildResult());
         WhereHandler whereHandler = new WhereHandler(where);
         Assert.assertEquals(whereHandler.acquireCurrentQuerySegment(), where);
