@@ -22,7 +22,9 @@ public class GeneralExceptionTest {
                 ExpressionIllegalStateException.class,
                 IllegalParameterException.class,
                 LogConstructException.class,
-                LogInitializedException.class
+                LogInitializedException.class,
+                ReflectGetPojoFieldValueException.class,
+                AsyncTaskExecutionException.class
         };
         for (Class<?> exceptionType : exceptionTypes) {
             testExceptionConstructors(exceptionType);
