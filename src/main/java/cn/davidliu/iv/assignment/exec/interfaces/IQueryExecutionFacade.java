@@ -1,10 +1,10 @@
 package cn.davidliu.iv.assignment.exec.interfaces;
 
 
-import cn.davidliu.iv.assignment.struct.segment.GroupBy;
-import cn.davidliu.iv.assignment.struct.segment.Limit;
-import cn.davidliu.iv.assignment.struct.segment.OrderBy;
-import cn.davidliu.iv.assignment.struct.segment.Where;
+import cn.davidliu.iv.assignment.core.segment.GroupBy;
+import cn.davidliu.iv.assignment.core.segment.Limit;
+import cn.davidliu.iv.assignment.core.segment.OrderBy;
+import cn.davidliu.iv.assignment.core.segment.Where;
 
 import java.util.List;
 
